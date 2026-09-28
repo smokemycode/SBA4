@@ -1,13 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Management App</title>
-    <script src="app.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task Management App</title>
+		<script src="app.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<form id="addTaskForm">
+				<h2>Add Task</h2>
+				<label for="taskInput">Task</label>
+				<input id="taskInput" type="text" placeholder="Enter a task" required />
+				<label for="categoryInput">Category</label>
+				<input id="categoryInput" type="text" placeholder="Enter a category" />
+				<label for="deadlineInput">Deadline</label>
+				<input id="deadlineInput" type="datetime-local" />
+				<label for="statusInput">Task Status</label>
+				<select id="statusInput">
+					<option value="in-progress">In Progress</option>
+					<option value="completed">Completed</option>
+					<option value="overdue">Overdue</option>
+				</select>
+				<input id="addTaskButton" type="submit" />
+			</form>
+
+			<form id="filterTaskForm">
+				<h2>Filter Tasks</h2>
+				<label for="categoryFilter">Category</label>
+				<input id="categoryFilter" type="text" placeholder="Filter Category" />
+				<label for="statusFilter">Status</label>
+				<select id="statusFilter">
+					<option value="">Select a Status</option>
+					<option value="in-progress">In Progress</option>
+					<option value="completed">Completed</option>
+					<option value="overdue">Overdue</option>
+				</select>
+			</form>
+			<ul id="taskList"></ul>
+		</main>
+	</body>
 </html>
